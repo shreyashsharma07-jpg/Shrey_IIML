@@ -1,3 +1,0 @@
-"use client";
-import {useState} from "react";
-export default function TaskForm({addTask}:{addTask:(t:any)=>void}){const [title,setTitle]=useState('');const [start,setStart]=useState('');const [due,setDue]=useState('');return <div><input placeholder="Task" value={title} onChange={e=>setTitle(e.target.value)}/><input type="date" value={start} onChange={e=>setStart(e.target.value)}/><input type="date" value={due} onChange={e=>setDue(e.target.value)}/><button onClick={()=>addTask({id:crypto.randomUUID(),title,start,due,status:'Not Started'})}>Add</button></div>}
