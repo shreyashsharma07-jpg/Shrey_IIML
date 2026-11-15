@@ -1,1 +1,0 @@
-export default function TaskList({tasks,setTasks}:any){return <div>{tasks.map((t:any)=><div key={t.id}><h3>{t.title}</h3><p>{t.start} - {t.due}</p><select value={t.status} onChange={e=>setTasks(tasks.map((x:any)=>x.id===t.id?{...x,status:e.target.value}:x))}><option>Not Started</option><option>In Progress</option><option>Completed</option></select></div>)}</div>}
